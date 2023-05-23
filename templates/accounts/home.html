@@ -364,14 +364,14 @@
                   {% comment %} <input type="hidden" id="js-product-id" name="order[products][]" value="75" > {% endcomment %}
                   <p class="form__error" style="display: none;">Укажите корректный email</p>
                   <div class="form__content">
-                    <input type="submit" class="form__button button button--form" value="Оплатить">
+                    <input type="submit" class="form__button button button--form" value="Оформить подписку">
                     <div class="form__check">
                       <input type="checkbox" id="checkbox-1" class="form__check-input" required>
                       <label for="checkbox-1" class="form__check-box">
-                        <span class="form__check-text">Нажимая кнопку "Оплатить" Вы даете согласие на 
-                          <a target="_blank" class="form__check-text" href="/policy.pdf">обработку персональных данных</a>, а также подтверждаете ознакомление с 
-                          <a target="_blank" class="form__check-text" href="/offer.pdf">публичной офертой</a> и 
-                          <a target="_blank" class="form__check-text" href="/tariff.pdf">тарифами</a>
+                        <span class="form__check-text">Нажимая кнопку "Оформить подписку" Вы даете согласие  на обработку персональных данных, а также подтверждаете ознакомление с
+                          <a target="_blank" class="form__check-text" href="{% static 'policy.pdf' %}">публичной офертой</a>,
+                          <a target="_blank" class="form__check-text" href="{% static 'sub_agreement.pdf' %}">тарифами</a> и 
+                          <a target="_blank" class="form__check-text" href="#infodown">информацией о платной подписке/a>
                         </span>
                       </label>
                     </div> 
@@ -476,7 +476,7 @@
       <div class="faq__list">
         <div class="version1">
           <div class="faq__item">
-            <div class="faq__question">
+            <div class="faq__question" id="infodown">
               <div class="faq__circle"></div>
               <div class="faq__question-text">
                 Что такое подписка?
