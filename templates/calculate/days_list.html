@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://client.bodyloss.ru/mycoursefiles/11e97a5d62 -->
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <style data-styled="active" data-styled-version="5.3.6"></style>
+    <title>Fitoaktiv</title>
+      <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
+        <link rel="image/png" href="{% static 'img/icons/logo.png' %}">
+
+  </head>
+  <body>
+    <div class="profile-menu">
+      <div class="profile-menu__container">
+          <div class="profile-menu__email">{{ user.email }}</div>
+          <div class="profile-menu__burger">
+              <span></span><span></span><span></span><span></span>
+          </div>
+      </div>
+      <div class="profile-dropdown" style="display: none">
+          <div class="profile-dropdown__container">
+              <ul class="profile-menu__dropdown profile-menu__dropdown--collapsed">
+                  <li class="profile-menu__item">
+                      <a href="{% url 'results' %}" class="profile-menu__link">Главная</a>
+                  </li>
+                  <li class="profile-menu__item">
+                      <a href="{% url 'password' %}" class="profile-menu__link">Настройки</a>
+                  </li>
+                  <li class="profile-menu__item">
+                    <a href="{% url 'logout' %}" class="profile-menu__link">Выход</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+    <main>
+      <div class="single-course">
+        <div class="single-course__container">
+          <div class="single-course-top-controls">
+            <a class="button button--outline" href="/calculate/results/">Контроль результатов</a>
+          </div>
+          <h3 class="single-course__title">
+            Fitoaktiv - Получите свой персональный план по похудению!
+          </h3>
+          <div class="single-course__tiles-wrapper">
+              {% for day in days_list %}
+             <a href="{{ day.train.id }}/" class="coursesNew-block">
+<!--                      {% if day.number <= allow_days %}
+                         <a href="{{ day.train.id }}/" class="coursesNew-block">
+                     {% else %}
+                         <a href="#" class="coursesNew-block coursesNew-block--disabled"> -->
+                     {% endif %}
+                  <div class="coursesNew-block__img">
+                    <img src="{{ day.image.url }}" alt="img" />
+                  </div>
+                  <div class="coursesNew-block__title">
+                    <div><div>{{ day.h1 }}</div></div>
+                    <svg
+                      width="31"
+                      height="16"
+                      viewBox="0 0 31 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M30.7071 8.70711C31.0976 8.31659 31.0976 7.68342 30.7071 7.2929L24.3431 0.928934C23.9526 0.53841 23.3195 0.53841 22.9289 0.928934C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM-8.74228e-08 9L30 9L30 7L8.74228e-08 7L-8.74228e-08 9Z"
+                        fill="#161239"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+    </main>
+    {% comment %} <script src="{% static 'js/results/main.js' %}"></script> {% endcomment %}
+    <script>
+      const btnStart = document.getElementById("beforeChange");
+      const btnNew = document.getElementById("currentWeightBtn");
+      const btnIdea = document.getElementById("ideaChange");
+      const modalNew = document.querySelector(".new");
+      const modalStart = document.querySelector(".start");
+      const modalIdea = document.querySelector(".idea");
+      const modalC1 = document.querySelector(".modal-c-1");
+      const modalC2 = document.querySelector(".modal-c-2");
+
+      const modalC3 = document.querySelector(".modal-c-3");
+      const modalC4 = document.querySelector(".modal-c-4");
+
+      const enterNew = document.querySelector(".new button");
+      const enterStart = document.querySelector(".start button");
+      const enterIdea = document.querySelector(".idea button");
+
+      btnStart.addEventListener("click", () => {
+        modalStart.style.display = "block";
+        modalC2.style.display = "block";
+      });
+      btnNew.addEventListener("click", () => {
+        modalNew.style.display = "block";
+        modalC1.style.display = "block";
+      });
+      btnIdea.addEventListener("click", () => {
+        modalIdea.style.display = "block";
+        modalC3.style.display = "block";
+      });
+      enterNew.addEventListener("click", (even) => {
+        let input = document.querySelector(".new input").valueAsNumber;
+        sendWeight("new", input);
+        modalNew.style.display = "none";
+      });
+
+      enterStart.addEventListener("click", (even) => {
+        let input = document.querySelector(".start input").valueAsNumber;
+        sendWeight("start", input);
+        modalStart.style.display = "none";
+      });
+
+      enterIdea.addEventListener("click", (even) => {
+        let input = document.querySelector(".idea input").valueAsNumber;
+        sendWeight("idea", input);
+        modalIdea.style.display = "none";
+      });
+
+      function sendWeight(field, value) {
+        data = { field: field, value: value };
+        fetch("/accounts/set_weight/", {
+          method: "POST",
+          body: JSON.stringify(data),
+        });
+      }
+    </script>
+    {% comment %} <script src="{% static 'js/nav.js' %}"></script> {% endcomment %}
+<script>
+    const prof = document.querySelector(".profile-menu__burger");
+const dropdown = document.querySelector(".profile-dropdown");
+
+prof.addEventListener("click", function () {
+  if (dropdown.style.display !== "none") {
+    dropdown.style.right = "-999px";
+    dropdown.style.display = "none";
+    prof.classList.remove("profile-menu__burger--open");
+  } else {
+    dropdown.style.right = "0px";
+    dropdown.style.display = "flex";
+    prof.classList.add("profile-menu__burger--open");
+  }
+});
+</script>
+  </body>
+</html>

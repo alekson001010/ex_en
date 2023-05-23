@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/reset.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+
+    {% block css %} {% endblock css %}
+  </head>
+  <body class="body">
+    {% block content %} {% endblock content %}
+
+    <div class="footer">
+      <div class="footer__container container">
+        <div class="footer__inner">
+          <div class="footer__item footer__item--html" style="font-size: 15px; color:#000;">
+            2023 ИП Русаков Егор Дмитриевич
+
+            <br />
+            ИНН: 772748428319
+
+            <br />
+            ОГРНИП: 321774600805635
+<br/>
+Тел.: +7 (995) 902-57-85
+            <br />
+            E-mail:
+            <a href="mailto:support@fitoaktiv.ru">support@fitoaktiv.ru</a>
+          </div>
+          <div class="footer__item">
+            <div
+              class="footer__info footer__info--title footer__info--grey footer__info--ru"
+            >
+              Платеж защищен
+            </div>
+            <div class="footer__pay">
+              <img
+                class="footer__img"
+                alt=""
+                src="{% static 'img/icons/footer1.png' %}"
+                width="36px"
+                height="12px"
+              /><img
+                class="footer__img"
+                alt=""
+                src="{% static 'img/icons/footer2.png' %}"
+                width="32px"
+                height="12px"
+              /><img
+                class="footer__img"
+                alt=""
+                src="{% static 'img/icons/footer3.png' %}"
+                width="13px"
+                height="12px"
+              /><img
+                class="footer__img"
+                alt=""
+                src="{% static 'img/icons/footer4.png' %}"
+                width="28px"
+                height="12px"
+              />
+            </div>
+            <div
+              class="footer__info footer__info--title footer__info--grey footer__info--ru"
+            >
+              Принимаем к оплате:
+            </div>
+            <div class="footer__pay footer__pay--ru">
+              <img
+                class="footer__img"
+                alt=""
+                src="{% static 'img/icons/visa.png' %}"
+                width="29px"
+                height="9px"
+              /><img
+                class="footer__img"
+                alt=""
+                src="{% static 'img/icons/mastercard.png' %}"
+                width="19px"
+                height="11px"
+              /><img
+                class="footer__img"
+                alt=""
+                src="{% static 'img/icons/world.png' %}"
+                width="32px"
+                height="9px"
+              />
+            </div>
+          </div>
+          <div class="footer__item footer__item--ru" style="gap: 5px">
+            <a
+              href="{% static 'policy.pdf' %}"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="footer__info footer__info--link footer__info--link-ru"
+              >Политика конфиденциальности</a
+            ><a
+              href="{% static 'recurrent.pdf' %}"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="footer__info footer__info--link footer__info--link-ru"
+              >Оферта</a
+            ><a
+              class="footer__info footer__info--link footer__info--link-ru"
+              href="{% url 'unsubscribe' %}"
+              >Отменить подписку</a
+            ><a
+              href="{% static 'sub_agreement.pdf' %}"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="footer__info footer__info--link footer__info--link-ru"
+              >Соглашение об использовании платной подписки</a
+            >
+            <a
+              href="{% static 'user_agreement.pdf' %}"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="footer__info footer__info--link footer__info--link-ru"
+              >Пользовательское соглашение</a
+            ><a
+              href="{% static 'terms.pdf' %}"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="footer__info footer__info--link footer__info--link-ru"
+              >Условия использования</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {%block js %} {% endblock js %}
+  </body>
+</html>
