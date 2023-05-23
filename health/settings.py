@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-(_ruh2h@crv6+1h=b8fbi6=mbo_ujao&i(9el1*9!-%cqr9y72
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.fitoaktiv.ru', 'fitoaktiv.ru']
+ALLOWED_HOSTS = ['www.ex-en.ru', 'ex-en.ru']
 
 
 # Application definition
@@ -54,7 +54,7 @@ MIDDLEWARE = [
 ]
 CSRF_COOKIE_SECURE = False
 
-CSRF_TRUSTED_ORIGINS = ['https://fitoaktiv.ru']
+CSRF_TRUSTED_ORIGINS = ['https://ex-en.ru']
 
 ROOT_URLCONF = 'health.urls'
 
