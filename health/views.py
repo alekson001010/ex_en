@@ -7,3 +7,6 @@ def index(request):
 
 def unsubscribe(request):
     return render(request, 'health/unsubscribe.html')
+
+def refund(request):
+    return render(request, 'health/refund.html')

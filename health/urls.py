@@ -25,8 +25,8 @@ urlpatterns = [
     path('', index, name='index'),
     path('accounts/', include('accounts.urls')),
     path('calculate/', include('calculate.urls')),
-    path('unsubscribe/', unsubscribe, name="unsubscribe")
-
+    path('unsubscribe/', unsubscribe, name="unsubscribe"),
+    path('refund/', refund, name="refund")
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

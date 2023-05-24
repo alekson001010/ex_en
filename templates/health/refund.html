@@ -1,0 +1,412 @@
+{% extends 'health/main.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="image/png" href="{% static 'img/icons/logo.png' %}">
+
+{% endblock css %} {% block title %} Refund {% endblock title%} 
+{% block content %}
+
+<style>
+    .eitouo {
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .joEfmY {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .joEfmY {
+            flex-direction: column;
+        }
+    }
+
+    .hKpMVO {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .gelQIs {
+        padding: 120px 16px;
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        .gelQIs {
+            padding: 60px 0px;
+        }
+    }
+
+    .hhSDkl {
+        margin-bottom: 40px;
+        color: rgb(155, 81, 227);
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 56px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 992px) {
+        .hhSDkl {
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .hhSDkl {
+            display: none;
+        }
+    }
+
+    .dozStv {
+        display: grid;
+        grid-template-columns: minmax(auto, 455px) minmax(585px, 1fr);
+        width: 100%;
+        margin: 0px auto;
+        max-width: 1040px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: rgba(213, 224, 231, 0.3) 0px 4px 30px;
+    }
+
+    @media screen and (max-width: 992px) {
+        .dozStv {
+            grid-template-columns: minmax(auto, 455px) minmax(545px, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .dozStv {
+            overflow: initial;
+            grid-template-columns: 1fr;
+            max-width: 320px;
+            border-radius: 0px 0px 10px 10px;
+            box-shadow: none;
+        }
+    }
+
+    .dOqHmQ {
+        padding: 40px;
+        background-color: rgb(217, 240, 82);
+        background-image: url("/img/picture.png");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 992px) {
+        .dOqHmQ {
+            padding: 16px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .dOqHmQ {
+            position: relative;
+            background-image: none;
+            border-radius: 0px 0px 10px 10px;
+            padding: 20px;
+            height: 260px;
+            order: 2;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .dOqHmQ::before {
+            content: "";
+            z-index: 2;
+            position: absolute;
+            inset: 0px;
+            margin-top: -58px;
+            background-image: url(/img/picture.png);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: 232px;
+        }
+    }
+
+    .loInTU {
+        max-width: 142px;
+        color: rgb(46, 46, 46);
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .loInTU {
+            font-size: 32px;
+            line-height: 35px;
+        }
+    }
+
+    .cBDbbv {
+        position: relative;
+        padding: 24px 40px;
+        background-color: rgb(213, 224, 231);
+    }
+
+    @media screen and (max-width: 992px) {
+        .cBDbbv {
+            padding: 24px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .cBDbbv {
+            box-shadow: rgba(213, 224, 231, 0.3) 0px 4px 30px;
+            padding: 24px 20px 64px;
+            margin-top: 35px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .cBDbbv::before {
+            content: "";
+            width: 100%;
+            height: 35px;
+            position: absolute;
+            bottom: 100%;
+            left: 0px;
+            right: 0px;
+            background-image: url("data:image/svg+xml,%3Csvg width='320' height='35' viewBox='0 0 320 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 35H320V0L0 35Z' fill='%23D5E0E7'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+    .cBDbbv .sc-gswNZR {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        .cBDbbv .sc-gswNZR {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            display: block;
+            color: rgb(155, 81, 227);
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 40px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    .QUcIy {
+        margin-bottom: 40px;
+    }
+
+    .cpnvJD {
+        display: flex;
+        margin: 16px 0px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .cpnvJD {
+            flex-wrap: wrap;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    .ktDYuA {
+        width: 100%;
+    }
+
+    .kBSWdp {
+        display: grid;
+        row-gap: 8px;
+    }
+
+    .cBDbbv .sc-cwSeag {
+        color: rgb(58, 115, 145);
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .jA-dqdr {
+        display: grid;
+        row-gap: 8px;
+    }
+
+    .duKPdi {
+        display: grid;
+        row-gap: 8px;
+    }
+
+    .cBDbbv .sc-gikAfH {
+        color: rgb(58, 115, 145);
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .cBDbbv .sc-iJnaPW {
+        color: rgb(58, 115, 145);
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .cBDbbv .sc-jrcTuL,
+    .cBDbbv .sc-csuSiG {
+        color: rgb(155, 81, 227);
+        font-family: Arial, sans-serif;
+        border-width: 2px;
+        border-color: rgb(155, 81, 227);
+        border-radius: 8px;
+    }
+
+    .zBrCt {
+        font-size: 14px;
+        color: rgb(74, 76, 77);
+    }
+
+    .fCaEWk {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        padding: 16px;
+        font-size: 16px;
+        font-family: inherit;
+        line-height: 18px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        resize: none;
+    }
+
+    .cBDbbv .sc-jrcTuL {
+        color: rgb(155, 81, 227);
+        font-family: Arial, sans-serif;
+        border-width: 2px;
+        border-color: rgb(155, 81, 227);
+        border-radius: 8px;
+    }
+
+    .cBDbbv .sc-jrcTuL {
+        color: rgb(155, 81, 227);
+        font-family: Arial, sans-serif;
+        border-width: 2px;
+        border-color: rgb(155, 81, 227);
+        border-radius: 8px;
+    }
+
+    .ftLMzk {
+        box-shadow: rgba(167, 167, 167, 0.1) 0px 1px 4px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 7px 15px;
+        font-size: 16px;
+        line-height: 1.5;
+        width: 100%;
+    }
+
+    .fOIsCV {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .ktDYuA:not(:last-child) {
+        margin-right: 16px;
+    }
+
+    .ktDYuA {
+        width: 100%;
+    }
+</style>
+
+<body>
+
+    <div>
+        <div class="sc-dYNRft eitouo" style="background: rgb(243, 243, 246);">
+            <main class="sc-fFWqGg joEfmY">
+                <div class="sc-gzJzQT hKpMVO">
+                    <div class="sc-cnMZnH gelQIs">
+
+                        <div class="sc-cCmLNy hhSDkl">Заполните форму для оформления заявки</div>
+
+                        <div class="sc-jFmBXp dozStv">
+
+                            <div class="sc-jTMoxg dOqHmQ">
+                                <div class="sc-hdxRZL loInTU">Нам очень жаль...</div>
+                            </div>
+
+                            <div class="sc-hrXEzC cBDbbv">
+                                <form class="sc-bcXHqe sZiLj">
+                                    <h1 class="sc-gswNZR QUcIy">Заполните форму для оформления заявки</h1>
+
+                                    <div class="sc-eDvSVe cpnvJD">
+                                        <div class="sc-jSUZER ktDYuA"><label class="sc-iveFHk kBSWdp"><span class="sc-cwSeag kcCwva">Ваши ФИО</span>
+                                                <div class="sc-fLcnxK jA-dqdr"><input name="name" placeholder="Введите ФИО полностью" class="sc-jrcTuL ftLMzk" value=""></div>
+                                            </label></div>
+                                    </div>
+                                    <div class="sc-eDvSVe cpnvJD">
+                                        <div class="sc-jSUZER ktDYuA"><label class="sc-lllmON duKPdi">
+                                                <div class="sc-iJnaPW zBrCt">Номер карты</div>
+                                                <div class="sc-fLcnxK jA-dqdr"><input placeholder="000000" class="sc-jrcTuL ftLMzk" value=""></div>
+                                                <div class="sc-gikAfH hPZGyY">Первые 6 цифр</div>
+                                            </label></div>
+                                        <div class="sc-gKPRtg fOIsCV"><label class="sc-lllmON duKPdi">
+                                                <div class="sc-fLcnxK jA-dqdr"><input placeholder="1234" class="sc-jrcTuL ftLMzk" value=""></div>
+                                                <div class="sc-gikAfH hPZGyY">Последние 4 цифры</div>
+                                            </label></div>
+                                    </div>
+                                    <div class="sc-eDvSVe cpnvJD">
+                                        <div class="sc-jSUZER ktDYuA"><label class="sc-iveFHk kBSWdp"><span class="sc-cwSeag kcCwva">Дата транзакции (день-месяц-год)</span>
+                                                <div class="sc-fLcnxK jA-dqdr"><input placeholder="31-12-2021" class="sc-jrcTuL ftLMzk" value=""></div>
+                                            </label></div>
+                                    </div>
+                                    <div class="sc-eDvSVe cpnvJD">
+                                        <div class="sc-jSUZER ktDYuA"><label class="sc-iveFHk kBSWdp"><span class="sc-cwSeag kcCwva">Ваша эл. почта</span>
+                                                <div class="sc-fLcnxK jA-dqdr"><input name="email" placeholder="abcd@ab.com" class="sc-jrcTuL ftLMzk" value=""></div>
+                                            </label></div>
+                                    </div>
+                                    <div class="sc-eDvSVe cpnvJD">
+                                        <div class="sc-jSUZER ktDYuA"><label class="sc-iveFHk kBSWdp"><span class="sc-cwSeag kcCwva">Причина возврата средств</span>
+                                                <div class="sc-fLcnxK jA-dqdr">
+                                                    <div class="sc-kDvujY kZZjxp"><textarea name="reason" placeholder="Подробнее опишите причину возврата денежных средств" class="sc-csuSiG fCaEWk"></textarea></div>
+                                                </div>
+                                            </label></div>
+                                    </div>
+                                    <div class="sc-eDvSVe cpnvJD">
+                                        <div class="sc-jSUZER ktDYuA">
+                                            <div class="sc-ksBlkl jCqgS">
+                                                <div>
+                                                    <div>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+
+
+</body>
+
+{% endblock content %}
