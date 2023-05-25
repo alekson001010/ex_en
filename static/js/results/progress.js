@@ -36,49 +36,6 @@ if (userGoal === 'increase') {
     img10.classList.add('active')
   }
 }
-if (userGoal === 'increase') {
-  if (progress > 0) {
-    let msg = document.getElementById('msgIncrease')
-    if (userGoal === 'increase') {
-      msg.style.color = 'rgb(0, 0, 0)'
-    } else {
-      msg.style.color = 'rgb(0, 0, 0)'
-    }
-    successDisplay(msg)
-  } else {
-    if (progress < 0) {
-      let msg = document.getElementById('msgDecrease')
-      if (userGoal === 'increase') {
-        msg.style.color = 'rgb(0, 0, 0)'
-      } else {
-        msg.style.color = 'rgb(0, 0, 0)'
-      }
-      failureDisplay(msg)
-    }
-  }
-} else {
-  if (userGoal === 'decrease') {
-    if (progress > 0) {
-      let msg = document.getElementById('msgIncrease')
-      if (userGoal === 'increase') {
-        msg.style.color = 'rgb(0, 0, 0)'
-      } else {
-        msg.style.color = 'rgb(0, 0, 0)'
-      }
-      failureDisplay(msg)
-    } else {
-      if (progress < 0) {
-        let msg = document.getElementById('msgDecrease')
-        if (userGoal === 'increase') {
-          msg.style.color = 'rgb(0, 0, 0)'
-        } else {
-          msg.style.color = 'rgb(0, 0, 0)'
-        }
-        successDisplay(msg)
-      }
-    }
-  }
-}
 
 function successDisplay(msg) {
   let positiveProgress = progress
@@ -87,7 +44,6 @@ function successDisplay(msg) {
   }
   msg.style.display = ''
   let currentResult = document.getElementById('currentResult')
-  currentResult.style.color = 'rgb(0, 0, 0)'
   currentResult.innerHTML = positiveProgress + ' кг'
   success.style.display = ''
 }
@@ -99,7 +55,6 @@ function failureDisplay(msg) {
   }
   msg.style.display = ''
   let currentResult = document.getElementById('currentResult')
-  currentResult.style.color = 'rgb(0, 0, 0)'
   currentResult.innerHTML = positiveProgress + ' кг'
   failure.style.display = ''
 }
