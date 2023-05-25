@@ -751,11 +751,11 @@ function successDisplay(msg) {
   if (positiveProgress < 0) {
     positiveProgress *= -1
   }
-  msg.style.display = ''
+  msg.style.display = 'block'
   let currentResult = document.getElementById('currentResult')
   currentResult.style.color = 'rgb(0, 0, 0)'
   currentResult.innerHTML = positiveProgress + ' кг'
-  success.style.display = ''
+  success.style.display = 'block'
 }
 
 function failureDisplay(msg) {
@@ -763,11 +763,11 @@ function failureDisplay(msg) {
   if (positiveProgress < 0) {
     positiveProgress *= -1
   }
-  msg.style.display = ''
+  msg.style.display = 'block'
   let currentResult = document.getElementById('currentResult')
   currentResult.style.color = 'rgb(0, 0, 0)'
   currentResult.innerHTML = positiveProgress + ' кг'
-  failure.style.display = ''
+  failure.style.display = 'block'
 }
 
 </script>
