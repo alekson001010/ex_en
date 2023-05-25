@@ -49,9 +49,9 @@
                 <a href="{% url 'days' %}"></a>
                 <p>Контроль результатов</p>
             </div>
-            <div class="btn">
-                <a href="/calculate/days"> Материалы Курса </a>
-            </div>
+            <a  href="/calculate/days" class="btn" style="display:flex;aling-items:center;justify-content:center;text-decoration:none;color:#0964ff;">
+                <span > Материалы Курса </span>
+            </a>
         </div>
     </section>
     <section class="content">
@@ -132,17 +132,11 @@
                         {% endif %}
                     </div>
                     <div class="text" style="margin-top: 20px">
-                        Вы
-                        <span class="s" id="msgDecrease" style=" display: none">сбросили</span>
-                        <span class="n" id="msgIncrease" style=" display: none"
+                        <span class="s" id="msgDecrease" style=" display: none;color:#000;">сбросили</span>
+                        <span class="n" id="msgIncrease" style=" display: none;color:#000;"
                         >набрали</span
                         >
-                        вес на
-                        <span class="number"><span id="currentResult"></span></span>
-                        <span class="st" id="success" style="display: none">так держать!</span>
-                        <span class="mt" id="failure" style="display: none"
-                        >нужно заниматься больше!</span
-                        >
+                        <span class="number" style="color:#000;"><span id="currentResult"></span></span>
                     </div>
                 </div>
             </div>
